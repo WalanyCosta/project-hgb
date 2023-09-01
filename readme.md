@@ -42,7 +42,7 @@
 ### instalação do projecto
 ```bash
  # Primeiro clonar o projecto
-    git clone <URL>
+    git clone <https://github.com/marta-devs/project-hgb.git>
 
  # Acender a pasta
     cd project-hgb
@@ -50,12 +50,21 @@
  # instalar as dependencias do projecto
     npm install
 
- # Rodar aplicativo
+ # Para rodar o servidor
     npm start
 
- # Depois scanner o QRcode ou uri para ver o projecto a funcionar
+ # Depois só confirmar na porta apresentada no console.
 ```
+### Regras para publicar
+ 
+```bash
+ # git pull deve ser feito antes de se fazer um git push
+    git pull
 
+ # Para publicar o projecto no repositório 
+    git push / push origin master
+
+```
 ## Tecnologia usada
 ---
 
@@ -73,5 +82,5 @@
 ## Licença
 ---
 
-> Este projecto está sob a licença MIT (link da licença). 
+>Este projecto está sob a licença MIT <a href="./LICENSE">licença</a> 
  
