@@ -63,19 +63,15 @@
 > o desenvolvimento do HELPDesktop, sendo assim temos a lista:
 
  - [bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
-
+ - [exemplo](#)
 
 ## Autores
 ---
+
 > Projecto desenvolvido pelos membros da marta
 
 ## Licença
 ---
 
 > Este projecto está sob a licença MIT (link da licença). 
-
-## Expressões de gratidão
----
-
-> Convidou Todas a gente que gostou desse projecto tanto nos aspecto de tecnologia ou a ideias do projecto para contribuir esse 
-> projecto afim de dar passo maior.
+ 
