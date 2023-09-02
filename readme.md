@@ -29,7 +29,7 @@
 > Aqui temos as funcionalidades desenvolvidas nesse projectos:
 
 - [] exemplo
-  
+
 ## Começando a usar
 ---
 
@@ -55,6 +55,7 @@
 
  # Depois só confirmar na porta apresentada no console.
 ```
+
 ### Regras para publicar
  
 ```bash
@@ -65,6 +66,16 @@
     git push / push origin master
 
 ```
+
+### Routas para acessar o projecto na web quando servidor tiver rodando 
+    ````
+      # Rota da pagina principal
+      localhost:3333/
+
+      #Rota da pagina do modal para trabalhar no modal(será eliminada depois)
+      localhost:3333/formulario
+    ````
+
 ## Tecnologia usada
 ---
 
