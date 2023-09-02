@@ -1,9 +1,11 @@
 import express from 'express'
-import renderViews from './src/routes/render-views.mjs'
+import renderViews from './render-views.mjs'
 
 const app = express()
+
 app.set('view engine', 'ejs')
-app.set('views', 'src/views/pages')
+app.set('views', 'views/pages')
+app.use(express.static('public'))
 
 app.use(renderViews)
 
