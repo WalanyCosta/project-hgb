@@ -72,7 +72,9 @@
 > o desenvolvimento do HELPDesktop, sendo assim temos a lista:
 
  - [bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
- - [exemplo](#)
+ - [express](https://github.com/expressjs/express) usado para criar servidores e renderizar nossa pagina.
+ - [nodemon](https://nodemon.io/) usado para salvar as nossa alterações de forma automatica por isso é uma dependencia de desenvolvimento.
+ - [ejs](https://ejs.co/#install) Nos permite que possamos usar informações do js directamente no html como por exemplo informações ou dados que saem do nosso banco de dados para html sem necessidade de consumir api e permite também criar components ou isolar uma parte do nosso html para que possa ser reusado.
 
 ## Autores
 ---
