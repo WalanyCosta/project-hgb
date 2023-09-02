@@ -51,7 +51,7 @@
     npm install
 
  # Para rodar o servidor
-    npm start
+    npm run dev
 
  # Depois só confirmar na porta apresentada no console.
 ```
