@@ -20,3 +20,19 @@
   color: #fff;
 }
 
+.w-10{
+  width: 16rem;
+}
+
+.w-30{
+  width: 22rem;
+}
+
+.barra{
+  width: 38px;
+  padding: 10px;
+  height: 10vh;
+  position: absolute;
+  top: -50px;
+  right: 38%;
+}
