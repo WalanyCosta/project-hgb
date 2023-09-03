@@ -65,6 +65,7 @@
  # Para publicar o projecto no repositório 
     git push / push origin master
 
+ #obs.: não esquecer de dar um git commit -a -m "nome do comite", para não dar erros desnecessarios
 ```
 
 ### Routas para acessar o projecto na web quando servidor tiver rodando 
