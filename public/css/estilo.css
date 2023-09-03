@@ -1,22 +1,79 @@
-.img{
-  width: 190px;
-  height: 200px;
-  background: #c0c0c0;
-  position: absolute;
-  display: flex;
-  left: 85%;
-  top:150px;
-}
 
 #titulo{
   color: #fff;
 }
-
+.img{
+  width: 195px;
+  height: 200px;
+  background: #c0c0c0;
+  position: absolute;
+  display: flex;
+  left: 75%;
+  top:250px;
+}
 .muda_cor{
   color: #fbd37a;
 }
 
-.footer{
+span#vii{
+  color: red;
+}
+.numero{
+  display: flex;
+  flex-direction: row-reverse;
+}
+.numeros{
+  margin: 10px 20px;
+  padding:0px 5px;
   color: #fff;
+  text-align: right;
+  letter-spacing: 1px;
+}
+.elementos{
+  display: flex;
+  flex-direction: row-reverse;
 }
 
+.elementos_filhos{
+  margin: 10px 20px 10px 70px;
+  padding: 0px 5px;
+  color: #ffff;
+  text-align: right;
+  letter-spacing: 1px;
+}
+
+#simbolos{
+  color: #000;
+}
+
+#card-text{
+  text-align: center;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.cards{
+  display: flex;
+  justify-content: center;
+}
+
+#card_item{
+ width: 250px;
+ border: 1px solid black;
+ padding: 10px;
+ margin: 10px 7px;
+ height: 200px;
+}
+
+.footer{
+  color: #fff;
+  text-align: end;
+  padding: 20px;
+}
+
+#artigo{
+  width: 600px;
+  padding: 18px;
+  text-transform: capitalize;
+  text-align: justify;
+}
