@@ -1,19 +1,133 @@
-.img{
-  width: 190px;
-  height: 200px;
-  background: #c0c0c0;
-  position: absolute;
+/* formated new page */
+/* * {
+  font-family: 'Lato', sans-serif;
+} */
+
+.bg-img-color {
+  background-image: url(../img/arseny-togulev\ -\ unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-blend-mode: overlay; */
+  opacity: 0.8;
+}
+
+
+/* <!-- header --> */
+
+#header-page {
   display: flex;
-  left: 85%;
-  top:150px;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* navbar */
+
+.width-nav {
+
+  height: 3.75rem;
+  width: 100%;
+  
+
+}
+
+div#container-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+img#logopage {
+  height: 2.188rem; /* 30px = 1.875rem  */
+}
+
+#navbar-items .navbar-nav {
+  display: flex;
+  justify-content: right;
+  width: 100%;
+}
+
+#navbar-items .nav-item {
+  margin: 0 0.625rem;
+}
+
+a.nav-link {
+  color: #010101;
+  font-weight: 600;
 }
 
 #titulo{
   color: #fff;
 }
 
-.muda_cor{
-  color: #fbd37a;
+h1 {
+  font-weight: 700;
+}
+
+#titulo p {
+  font-weight: 400;
+}
+
+/* #titulo p span {
+  font-size: 1rem;
+} */
+
+/* final */
+
+
+/* .img{
+  width: 190px;
+  height: 200px;
+  display: flex;
+  left: 85%;
+  top:150px;
+} */
+
+/* About */
+
+.container-about {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.container h2 {
+  font-weight: 680;
+}
+
+.container .p-article{
+    max-width: 37.5rem;
+    text-align: justify;
+    margin-bottom: 1.875rem;
+}
+
+.container-img {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  
+  margin-top: -12rem;
+  width: 23.75rem;
+  height: 23.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.container-img .cover-doctor {
+  background-image: url();
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 23.75rem;
+  height: 23.75rem;
+}
+
+/* numeros */
+
+.container-number{
+  
 }
 
 .footer{
