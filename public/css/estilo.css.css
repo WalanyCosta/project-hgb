@@ -1,0 +1,22 @@
+.img{
+  width: 190px;
+  height: 200px;
+  background: #c0c0c0;
+  position: absolute;
+  display: flex;
+  left: 85%;
+  top:150px;
+}
+
+#titulo{
+  color: #fff;
+}
+
+.muda_cor{
+  color: #fbd37a;
+}
+
+.footer{
+  color: #fff;
+}
+
