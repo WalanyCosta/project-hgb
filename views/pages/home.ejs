@@ -1,73 +1,107 @@
 <!DOCTYPE html>
 <html lang="pt">
 <%- include('../components/header')%>
-<body>
-      <!--navbar-->
-      <nav class="navbar bg-dark navbar-dark navbar-expand-sm py-3">
-        <div class="container-fluid">
-          <a href="" class="navbar-brand d-flex">LOGO</a>
-          </div>
-          <div class="collapse navbar-collapse" id="menunavbar">
-            <div class="navbar-nav ms-auto">
-              <ul class="navbar-nav">
+
+  <body>
+
+    <div class="geral">
+
+      <!-- header  -->
+      <section class=" bg-img-color" id="header-page ">
+        <!--navbar-->
+        <nav class="navbar navbar-expand-lg  width-nav ">
+
+          <div class="container py-3" id="container-nav">
+
+            <a href="#" class="navbar-brand">
+              <img src="img/favicon.png" alt="logo of site" id="logopage">
+            </a>
+
+            <menu class="collapse navbar-collapse" id="navbar-items">
+
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a href="#" class="nav-link active">Inico</a>
+                  <a class="nav-link" aria-current="page" href="#">Início</a>
                 </li>
                 <li class="nav-item">
-                  <a href="#" class="nav-link">Sobre</a>
+                  <a class="nav-link" href="#">Sobre</a>
                 </li>
                 <li class="nav-item">
-                  <a href="#" class="nav-link">Contactos</a>
+                  <a class="nav-link" href="#">Contactos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#footer">Fale connosco</a>
                 </li>
               </ul>
+
+            </menu>
+
+          </div>
+
+        </nav>
+
+
+        <div id="titulo" class="container ">
+          <h1 class=""> <span class="text-danger">VII</span> <br> JORNADAS <br> CIENTIFICAS</h1>
+          <p class="lead">HOSPITAL GERAL DE BENGUELA <br> <span>Lema: assistencia Humanizada para melhor servir"</span>
+          </p>
+        </div>
+
+      </section>
+
+      <section class="container py-3 container-about">
+
+        <div class="container-p">
+          <h2>TUDO SOBRE <br> O <span class="text-warning">EVENTO</span></h2>
+          <article>
+            <p class="p-article">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae hic accusamus nihil
+              eveniet iusto
+              excepturi sint repellendus molestiae velit provident, veniam possimus ducimus quas aut labore facere ullam
+              esse architecto?
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel excepturi quod dignissimos saepe repellendus
+              culpa odio. Eaque veniam inventore temporibus. Eius dignissimos accusamus pariatur, eos quae quibusdam
+              esse
+              velit distinctio!
+            </p>
+            <button type="button" class="btn btn-danger">Emitir Certificado</button>
+          </article>
+        </div>
+
+        <div class="container-img">
+          <img src="../img/clay-banks-unsplash.jpg" alt="cover-doctor" class="cover-doctor">
+        </div>
+
+      </section>
+
+      <section class="bg-warning">
+
+        <div class="container py-3 container-number">
+
+          <div class="numeros-title">
+            <h2>Números</h2>
+            <p>vem tambem fazer parte <br> destes números exclusivos</p>
+          </div>
+
+          <div class="numeros">
+          
+              <section class="elementos_filhos">
+                <h2>+100</h2>
+                <p>Participantes <br> no activo</p>
+              </section>
+              <section class="elementos_filhos">
+                <h2>+5</h2>
+                <p>Assuntos a serem <br> retratados</p>
+              </section>
+              <section class="elementos_filhos">
+                <h2>+50</h2>
+                <p>Profisionais da<br> area do hospital</p>
+              </section>
+
             </div>
           </div>
         </div>
-      </nav>
-  
-  
-      <div id="titulo" class="container-fluid navbar-dark bg-dark">
-        <h1>VII <br> JORNADAS <br> CIENTIFICAS</h1>
-        <p>HOSPITAL GERAL DE BENGUELA <br> "Lema: assistencia Humanizada para melhor servir"</p>
-        <div class="img">
-          <!--aqui vai uma foto-->
-        </div>
-      </div>
-  
-      <div class="container-fluid py-3" >
-        <h2>TUDO SOBRE <br> O <span class="muda_cor">EVENTO</span></h2>
-        <article>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae hic accusamus nihil eveniet iusto excepturi sint repellendus molestiae velit provident, veniam possimus ducimus quas aut labore facere ullam esse architecto?
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel excepturi quod dignissimos saepe repellendus culpa odio. Eaque veniam inventore temporibus. Eius dignissimos accusamus pariatur, eos quae quibusdam esse velit distinctio!
-          </p>
-          <button type="button" class="btn btn-danger">Ver mais</button>
-        </article>
-      </div>
-  
-      <div class="container-fluid bg-warning py-3">
-  
-        <div class="numeros">
-          <section class="numeros">
-            <h2>Números</h2>
-            <p>vem tambem fazer parte <br> destes números exclusivos</p>
-          </section>
-        </div>
-        <div class="elementos">
-          <section class="elementos_filhos">
-            <h2>+100</h2>
-            <p>Participantes <br> no activo</p>
-          </section>
-          <section class="elementos_filhos">
-            <h2>+5</h2>
-            <p>Assuntos a serem <br> retratados</p>
-          </section>
-          <section class="elementos_filhos">
-            <h2>+50</h2>
-            <p>Profisionais da<br> area do hospital</p>
-          </section>
-        </div>
-  
-      </div>
+      </section>
+
       <div class="container-fluid">
         <h2>Depoimentos</h2>
         <h4>Depoimentos de participantes das actividades passadas</h4>
@@ -84,15 +118,16 @@
           </div>
         </div>
       </div>
-  
-      
+
+
       <div class="container-fluid bg-dark ">
         <footer class="footer">
           <h3>CONTACTOS</h3>
         </footer>
       </div>
-  
-  
+
+    </div>
     <script src="/public/bootstrap/css/bootstrap.min.js"></script>
-</body>
+  </body>
+
 </html>
