@@ -11,7 +11,7 @@
         <!--navbar-->
         <nav class="navbar navbar-expand-lg  width-nav ">
 
-          <div class="container py-3" id="container-nav">
+          <div class="container-fluid py-3" id="container-nav">
 
             <a href="#" class="navbar-brand">
               <img src="img/favicon.png" alt="logo of site" id="logopage">
@@ -21,7 +21,7 @@
 
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="#">Início</a>
+                  <a  class="nav-link active" aria-current="page" href="#">Início</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">Sobre</a>
@@ -41,7 +41,7 @@
         </nav>
 
 
-        <div id="titulo" class="container ">
+        <div id="titulo" class="container-fluid ">
           <h1 class=""> <span class="text-danger">VII</span> <br> JORNADAS <br> CIENTIFICAS</h1>
           <p class="lead">HOSPITAL GERAL DE BENGUELA <br> <span>Lema: assistencia Humanizada para melhor servir"</span>
           </p>
@@ -49,9 +49,9 @@
 
       </section>
 
-      <section class="container py-3 container-about">
+      <section class="container-fluid py-3 container-about">
 
-        <div class="container-p">
+        <div class="container-p" id="article">
           <h2>TUDO SOBRE <br> O <span class="text-warning">EVENTO</span></h2>
           <article>
             <p class="p-article">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae hic accusamus nihil
@@ -75,26 +75,28 @@
 
       <section class="bg-warning">
 
-        <div class="container py-3 container-number">
+        <div class=".container-fluid py-3 container-number">
 
           <div class="numeros-title">
-            <h2>Números</h2>
-            <p>vem tambem fazer parte <br> destes números exclusivos</p>
+            <section class="numeros">
+              <h2>Números</h2>
+              <p>vem tambem <span id="simbolos">fazer parte</span> <br> destes números exclusivos</p>
+            </section>
           </div>
 
-          <div class="numeros">
-          
+          <div class="elementos">
+
               <section class="elementos_filhos">
-                <h2>+100</h2>
-                <p>Participantes <br> no activo</p>
+                <h2><span id="simbolos">+</span>5</h2>
+                <p >Assuntos a serem <br>retratados</p>
               </section>
               <section class="elementos_filhos">
-                <h2>+5</h2>
-                <p>Assuntos a serem <br> retratados</p>
+                <h2><span id="simbolos">+</span>50</h2>
+                <p >Profisionais da<br> area do hospital</p>
               </section>
               <section class="elementos_filhos">
-                <h2>+50</h2>
-                <p>Profisionais da<br> area do hospital</p>
+                <h2><span id="simbolos">+</span>100</h2>
+                <p>Participantes <br>no activo</p>
               </section>
 
             </div>
@@ -102,27 +104,61 @@
         </div>
       </section>
 
-      <div class="container-fluid">
+      <!--Cards com imagens ou videos-->
+      <div class="container-fluid" id="card-text">
         <h2>Depoimentos</h2>
-        <h4>Depoimentos de participantes das actividades passadas</h4>
-        <div class="card" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text">Nome: <br> Profissão</p>
-          </div>
-          <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-              <p class="card-text">Nome: <br> Profissão</p>
+        <h5>Depoimentos de participantes das actividades passadas</h5>
+        
+          <!--Area de cards - retirar as fotos e por videos-->
+        <div class="cards">
+         
+          <div class="card" id="cards-item" style="width: 18rem;">
+            <img src="../img/pexels-karolina-grabowska-5206931.jpg" class="img-thumbnail" alt="cover-doctor">
+            <div class="card-body" id="card-corpo">
+              <h5 class="card-title">Estudante de enfermagem</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-danger">Saiba mais</a>
             </div>
           </div>
+          <!--Area de cards - retirar as fotos e por videos-->
+            <div class="card" id="cards-item" style="width: 18rem;">
+              <img src="../img/pexels-antoni-shkraba-6749778.jpg" class="img-thumbnail" alt="enfermeira">
+              <div class="card-body" id="card-corpo">
+                <h5 class="card-title">Enfermeira</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-danger">Saiba mais</a>
+              </div>
+            </div>
+
+            <div class="card" id="cards-item" style="width: 18rem;">
+              <img src="../img/pexels-los-muertos-crew-8460157.jpg" class="img-thumbnail" alt="Médico">
+              <div class="card-body" id="card-corpo">
+                <h5 class="card-title">Médico</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-danger">Saiba mais</a>
+              </div>
+            </div>
+
         </div>
+
       </div>
 
-
-      <div class="container-fluid bg-dark ">
+      <!--Roda_pé-->
+      <div class="container-fluid bg-dark">
         <footer class="footer">
-          <h3>CONTACTOS</h3>
+          <div class="contactos">
+            <h3>CONTACTOS</h3>
+            <h6>+244 924941017 - 244 941873137</h6>
+            <a href="#">Email: departamentodeformaçãohgb@gmail.com</a>
+          </div>
+
+          <div class="localizacao">
+            <h6>LOCAL</h6>
+            <p>Anfiteatro do ISPB</p>
+            <h6>ORGANIZAÇÃO</h6>
+            <p>Direcção do HGB</p>
+            <h6>APOIO</h6>
+          </div>
         </footer>
       </div>
 
