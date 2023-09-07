@@ -39,7 +39,7 @@ div#container-nav {
 
 img#logopage {
   height: 2.188rem; /* 30px = 1.875rem  */
-  padding: 0 40px;
+  padding: 0 30px;
 }
 
 #navbar-items .navbar-nav {
@@ -70,20 +70,6 @@ h1 {
   font-weight: 400;
 }
 
-/* #titulo p span {
-  font-size: 1rem;
-} */
-
-/* final */
-
-
-/* .img{
-  width: 190px;
-  height: 200px;
-  display: flex;
-  left: 85%;
-  top:150px;
-} */
 
 /* About */
 
@@ -97,6 +83,7 @@ h1 {
 
 .container h2 {
   font-weight: 680;
+  margin-top: 20px;
 }
 
 .container .p-article{
@@ -162,36 +149,39 @@ h1 {
   font-weight: 600;
 }
 
-/*Cards com imagens ou videos*/
-#card-text{
-  padding: 7px;
-  text-align: center;
-  letter-spacing: 1px;
-  font-weight: 600;
-}
+/* cards */
 
 .cards{
   display: flex;
   justify-content: center;
+  gap: 1rem;
 }
 
-#cards-item{
-  padding: 10px;
-  margin: 5px 10px;
-}
-#cards-item img{
-  position: relative;
-  margin: 0 auto;
-  width: 400px;
-  height: 300px;
-  padding: 0;
+.container-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
 }
 
-#card-corpo{
-  position: relative;
-  margin: 0 auto;
-  padding: 0;
+/* .container-video {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
+
+.card-video {
+  border-radius: solid 0.5rem black;
+} */
+
+
+
+
+/* footer */
+/* 
 .footer{
   display: flex;
   flex-direction: column;
@@ -216,7 +206,8 @@ h1 {
   padding: 5px;
   letter-spacing: 1px;
   margin: 10px;
-}
+} */
+
 
 @media (max-width:820px){
   .container-img {
