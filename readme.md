@@ -88,10 +88,10 @@
  - [express](https://github.com/expressjs/express) usado para criar servidores e renderizar nossa pagina.
  - [nodemon](https://nodemon.io/) usado para salvar as nossa alterações de forma automatica por isso é uma dependencia de desenvolvimento.
  - [ejs](https://ejs.co/#install) Nos permite que possamos usar informações do js directamente no html como por exemplo informações ou dados que saem do nosso banco de dados para html sem necessidade de consumir api e permite também criar components ou isolar uma parte do nosso html para que possa ser reusado.
- -[fs-extra](https://www.npmjs.com/package/fs-extra) usado para buscar arquivo, escrever arquivo, deletar arquivo do sistema.
- -[handlebars](https://handlebarsjs.com/) usado para converter arquivo .hbs para html, visto que o hbs permite receber valores por meio de "{{nome: 'qualquerNome'}}" isso ajuda a dinamizar em vez
+ - [fs-extra](https://www.npmjs.com/package/fs-extra) usado para buscar arquivo, escrever arquivo, deletar arquivo do sistema.
+ - [handlebars](https://handlebarsjs.com/) usado para converter arquivo .hbs para html, visto que o hbs permite receber valores por meio de "{{nome: 'qualquerNome'}}" isso ajuda a dinamizar em vez
  de introduzir valor por meio de um js.
- -[puppeteer](https://pptr.dev/) é uma biblioteca que do nodejs que tem em si chrome/chromium permite fazer operações do navegador usando nodejs. Nesse projecto estamos usando ele para cria arquivo pdf por meio de arquivo html, isso é uma das funcionalidade do navegador.
+ - [puppeteer](https://pptr.dev/) é uma biblioteca que do nodejs que tem em si chrome/chromium permite fazer operações do navegador usando nodejs. Nesse projecto estamos usando ele para cria arquivo pdf por meio de arquivo html, isso é uma das funcionalidade do navegador.
 
 ## Autores
 ---
