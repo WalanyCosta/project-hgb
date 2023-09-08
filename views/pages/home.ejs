@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt">
 <%- include('../components/header')%>
-
   <body>
 
     <div class="geral">
@@ -63,7 +62,12 @@
               esse
               velit distinctio!
             </p>
-            <button type="button" class="btn btn-danger">Emitir Certificado</button>
+            <button 
+              type="button" 
+              class="btn btn-danger" 
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+              >Emitir Certificado</button>
           </article>
         </div>
 
@@ -191,10 +195,11 @@
       </section>
 
     </div>
-
+      
     </div>
-    <script src="/public/bootstrap/css/bootstrap.min.js"></script>
-
+    <%-include('../components/modal')%>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/js/modal.js"></script>
   </body>
 
 </html>
