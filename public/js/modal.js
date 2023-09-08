@@ -9,9 +9,9 @@ butaoGerarCertificado.addEventListener('click', (evento)=>{
         .then(response => response.json())
         .then(data => {
             
-            if(data?.messagem) alert(`Ocorreu um erro no servidor. Por favor tente novamente`)
+            if(data?.messagemError) alert(data.messagemError)
 
-            alert('Feito com successo!')
+            alert(data.mensagem)
         })
         .catch(error => {console.log(error.mensagem)})
 

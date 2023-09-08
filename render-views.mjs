@@ -4,6 +4,7 @@ import path from 'path'
 import hbs from 'handlebars'
 import puppeteer from 'puppeteer'
 import { BANCODADOMEMORIA } from './utils/bd.mjs'
+import { CriaPastaSeNaoExistir } from "./utils/criar-pasta-se-nao-existir.mjs"
 
 const compile = async function(data){
     const caminhoDoArquivo = path.join('views/pages/template.hbs')
@@ -23,7 +24,7 @@ renderViews.get('/certificado/:numeroAgente', async (request, response)=>{
     const usuario = BANCODADOMEMORIA.find((u)=> u.numeroAgente === numeroAgente)
 
     if(!usuario){
-        return response.json({ mensagem: 'usuário não existe na Base de Dados'})
+        return response.status(403).json({ mensagemError: 'usuário não existe na Base de Dados'})
     }
 
     const nomeDoArquivo = (Math.random() * 13) + '_doc.pdf'
@@ -33,7 +34,8 @@ renderViews.get('/certificado/:numeroAgente', async (request, response)=>{
     const page = await browser.newPage()
     await page.setContent(certificadoEmHtml)
     await page.emulateMediaType('screen')
-    const pdf = await page.pdf({
+    await CriaPastaSeNaoExistir()
+    await page.pdf({
         path: `docs/${nomeDoArquivo}`,
         format: 'letter',
         landscape: true,
@@ -41,6 +43,7 @@ renderViews.get('/certificado/:numeroAgente', async (request, response)=>{
     })
     
     await browser.close()
+    return response.json({mensagem: 'Gerado com sucesso'})
 
 })
 
