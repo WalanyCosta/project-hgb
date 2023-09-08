@@ -42,11 +42,4 @@ renderViews.get('/certificado/:numeroAgente', async (request, response)=>{
     return response.json({mensagem: 'Gerado com sucesso'})    
 })
 
-renderViews.get('/exibirCertificado/:caminhoDoArquivo', async(request, response) => {
-    const caminhoDoArquivo = request.params.caminhoDoArquivo
-    const pdf = await fs.readFile(caminhoDoArquivo, 'utf-8')
-
-    return response.send(pdf)
-})
-
 export default renderViews
