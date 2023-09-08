@@ -31,7 +31,8 @@ renderViews.get('/certificado/:numeroAgente', async (request, response)=>{
     await page.setContent(certificadoEmHtml)
     await page.emulateMediaType('screen')
     await CriaPastaSeNaoExistir()
-    await page.pdf({
+    //retorna o pdf criado
+    const pdf = await page.pdf({
         path: `docs/${nomeDoArquivo}`,
         format: 'letter',
         landscape: true,
@@ -39,6 +40,8 @@ renderViews.get('/certificado/:numeroAgente', async (request, response)=>{
     })
     
     await browser.close()
+    //codigo de envio deve estar aqui
+
     return response.json({mensagem: 'Gerado com sucesso'})    
 })
 
