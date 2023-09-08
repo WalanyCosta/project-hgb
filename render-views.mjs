@@ -1,19 +1,14 @@
 import express from "express"
 import fs from 'fs-extra'
-import path from 'path'
-import hbs from 'handlebars'
 import puppeteer from 'puppeteer'
 import { BANCODADOMEMORIA } from './utils/bd.mjs'
 import { CriaPastaSeNaoExistir } from "./utils/criar-pasta-se-nao-existir.mjs"
 
-const compile = async function(data){
-    const caminhoDoArquivo = path.join('views/pages/template.hbs')
-    const html = await fs.readFile(caminhoDoArquivo, 'utf-8')
-    return hbs.compile(html)(data);
-}
-
-
 const renderViews = express.Router()
+
+const getNomeDocs = () =>{
+    return (Math.random() * 13) + '_doc.pdf'
+}
 
 renderViews.get('/', async (request, response)=>{
     response.render('home')
@@ -27,7 +22,7 @@ renderViews.get('/certificado/:numeroAgente', async (request, response)=>{
         return response.status(403).json({ mensagemError: 'usuário não existe na Base de Dados'})
     }
 
-    const nomeDoArquivo = (Math.random() * 13) + '_doc.pdf'
+    const nomeDoArquivo = getNomeDocs()
     const certificadoEmHtml = await compile(usuario)
 
     const browser = await puppeteer.launch({headless: true})
@@ -43,8 +38,7 @@ renderViews.get('/certificado/:numeroAgente', async (request, response)=>{
     })
     
     await browser.close()
-    return response.json({mensagem: 'Gerado com sucesso'})
-
+    return response.json({mensagem: 'Gerado com sucesso'})    
 })
 
 renderViews.get('/exibirCertificado/:caminhoDoArquivo', async(request, response) => {
