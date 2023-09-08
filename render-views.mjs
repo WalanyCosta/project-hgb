@@ -3,6 +3,7 @@ import fs from 'fs-extra'
 import puppeteer from 'puppeteer'
 import { BANCODADOMEMORIA } from './utils/bd.mjs'
 import { CriaPastaSeNaoExistir } from "./utils/criar-pasta-se-nao-existir.mjs"
+import { compilaHbs } from "./utils/compila-hbs.mjs"
 
 const renderViews = express.Router()
 
@@ -23,7 +24,7 @@ renderViews.get('/certificado/:numeroAgente', async (request, response)=>{
     }
 
     const nomeDoArquivo = getNomeDocs()
-    const certificadoEmHtml = await compile(usuario)
+    const certificadoEmHtml = await compilaHbs(usuario)
 
     const browser = await puppeteer.launch({headless: true})
     const page = await browser.newPage()

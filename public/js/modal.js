@@ -1,8 +1,16 @@
 const numeroAgente = document.getElementById('CIF')
-const butaoGerarCertificado = document.getElementById('gerador')
+const forms = document.querySelectorAll('.needs-validation')
 
-butaoGerarCertificado.addEventListener('click', (evento)=>{
-     fetch(`http://localhost:3333/certificado/${numeroAgente.value}`, {
+Array.from(forms).forEach(form => {
+  form.addEventListener('submit', event => {
+    event.preventDefault()
+    if (!form.checkValidity()) {
+      event.stopPropagation()
+    }
+
+    form.classList.add('was-validated')
+
+    fetch(`http://localhost:3333/certificado/${numeroAgente.value}`, {
         method: 'GET',
         mode: 'cors'
     })
@@ -15,4 +23,5 @@ butaoGerarCertificado.addEventListener('click', (evento)=>{
         })
         .catch(error => {console.log(error.mensagem)})
 
+  })
 })
