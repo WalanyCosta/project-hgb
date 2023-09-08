@@ -50,7 +50,6 @@
  # instalar as dependencias do projecto
     npm install
 
- # Antes de rodar o projecto criam a pasta docs no directorio raiz
  # Para rodar o servidor
     npm run dev
 
