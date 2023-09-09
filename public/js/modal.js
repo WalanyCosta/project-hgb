@@ -37,8 +37,11 @@ const gerarCertificado = () => {
     })
         .then(response => response.json())
         .then(data => {
-            if(data?.messagemError) adicionarAlertMensagem(data.messagemError, 'danger') 
-            adicionarAlertMensagem(data.mensagem, 'success')
+            if(data?.error){
+              adicionarAlertMensagem(data.error, 'danger') 
+            }else{
+              adicionarAlertMensagem(data.mensagem, 'success')
+            }
         })
         .catch(error => error.mensagem)
         .finally(()=> {

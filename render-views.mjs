@@ -20,7 +20,7 @@ renderViews.get('/certificado/:numeroAgente', async (request, response)=>{
     const usuario = BANCODADOMEMORIA.find((u)=> u.numeroAgente === numeroAgente)
 
     if(!usuario){
-        return response.status(403).json({ mensagemError: 'usuário não existe na Base de Dados'})
+        return response.status(403).json({ error: 'usuário não existe na Base de Dados'})
     }
 
     const nomeDoArquivo = getNomeDocs()
