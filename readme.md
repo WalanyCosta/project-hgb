@@ -28,7 +28,11 @@
 
 > Aqui temos as funcionalidades desenvolvidas nesse projectos:
 
-- [] exemplo
+- [x] Home
+- [x] Interface do Emitir certificado
+- [] Interface do cadastrar usuário
+- [] Gerar e enviar certificado
+- [] cadastrar usuario no evento
 
 ## Começando a usar
 ---
@@ -37,7 +41,7 @@
 >e depois seguir passo a passo como instalar o projecto.
 
 ### Pré-requisitos
-> Para se ter esse projecto a funcionar deve se ter o [Nodejs](https://nodejs.org/pt-br/download) na >sua maquina que vai permitir com que projecto rode na sua maquina, [Git](https://git-scm.com/downloads), conseguir clonar o projecto na sua >máquina, [Vscode](https://code.visualstudio.com/download) fazer algumas alterações do projecto.
+> Para se ter esse projecto a funcionar deve se ter o [Nodejs](https://nodejs.org/pt-br/download) na >sua maquina que vai permitir com que projecto rode na sua maquina, [Git](https://git-scm.com/downloads), conseguir clonar o projecto na sua >máquina, [Vscode](https://code.visualstudio.com/download) fazer algumas alterações do projecto, baixar a extensão do [prisma](#) no vscode para facilitar na escrita e na formatação do arquivo schema.
 
 ### instalação do projecto
 ```bash
@@ -91,6 +95,8 @@
  - [handlebars](https://handlebarsjs.com/) usado para converter arquivo .hbs para html, visto que o hbs permite receber valores por meio de "{{nome: 'qualquerNome'}}" isso ajuda a dinamizar em vez
  de introduzir valor por meio de um js.
  - [puppeteer](https://pptr.dev/) é uma biblioteca que do nodejs que tem em si chrome/chromium permite fazer operações do navegador usando nodejs. Nesse projecto estamos usando ele para cria arquivo pdf por meio de arquivo html, isso é uma das funcionalidade do navegador.
+ - [prisma](https://www.prisma.io/docs) é um ORM que permite manipular o banco de dados sem necessitar de ir no proprio banco de dados e fazer as funções de criar banco de dado, criar tabela,
+ fazer consulta, deletar registro e etc. E podemos mudar de banco de dados sem a necessidade de alterar os comandos por que ele suporta todos os tipos de banco de dados e seu comando são universal para manipular qualquer banco de dados. 
 
 ## Autores
 ---
