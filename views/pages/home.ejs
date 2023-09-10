@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt">
 <%- include('../components/header')%>
-
   <body>
 
     <div class="main">
@@ -73,7 +72,12 @@
               esse
               velit distinctio!
             </p>
-            <button type="button" class="btn btn-danger">Emitir Certificado</button>
+            <button 
+              type="button" 
+              class="btn btn-danger" 
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+              >Emitir Certificado</button>
           </article>
         </div>
 
@@ -202,10 +206,10 @@
       </section>
 
     </div>
-
+      
     </div>
+    <script src="/public/bootstrap/css/bootstrap.min.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  </body>
 
-  </body> 
 </html>
