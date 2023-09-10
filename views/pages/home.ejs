@@ -3,7 +3,7 @@
 <%- include('../components/header')%>
   <body>
 
-    <div class="main">
+    <div class="geral">
 
       <!-- header  -->
       <section class="bg-img-color" id="header-page">
@@ -16,18 +16,7 @@
               <img src="img/favicon.png" alt="logo of site" id="logopage">
             </a>
 
-            <button type="button" 
-            data-bs-toggler="collapse" 
-            data-bs-target="#navbarNav"
-            class="navbar-toggler" 
-            aria-controls="navbarNav" 
-            aria-expanded="false" 
-            aria-label="Toggle navigation" >
-
-              <span class="navbar-toggler-icon"></span>
-
-            </button>
-            <menu class="collapse navbar-collapse"  id="navbar-items">
+            <menu class="collapse navbar-collapse" id="navbar-items">
 
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
@@ -43,6 +32,7 @@
                   <a class="nav-link" href="#footer">Fale connosco</a>
                 </li>
               </ul>
+
             </menu>
 
           </div>
@@ -101,21 +91,15 @@
           <div class="elementos">
 
             <section class="elementos_filhos">
-              <h2><span id="simbolos"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
-                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
-              </svg></span>5</h2>
+              <h2><span id="simbolos">+</span>5</h2>
               <p>Assuntos a serem <br>retratados</p>
             </section>
             <section class="elementos_filhos">
-              <h2><span id="simbolos"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
-                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z "/>
-              </svg></span>50</h2>
+              <h2><span id="simbolos">+</span>50</h2>
               <p>Profisionais da<br> area do hospital</p>
             </section>
             <section class="elementos_filhos">
-              <h2><span id="simbolos"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
-                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
-              </svg></span>100</h2>
+              <h2><span id="simbolos">+</span>100</h2>
               <p>Participantes <br>no activo</p>
             </section>
 
@@ -124,25 +108,24 @@
     </div>
     </section>
 
-    <!--Cards com imagens ou videos-->
-    <div class="container container-card">
+    <!--Cards com videos-->
+    <div class="container-fluid container-card">
 
       <div class="container-title mb-2">
-
         <h2 class="text-center mb-2">Depoimentos</h2>
         <p class="text-center ">Depoimentos de participantes das actividades passadas</p>
-
       </div>
 
-      <!--Area de cards - retirar as fotos e por videos-->
+      <!--Area de cards com videos-->
       <div class="cards container-video">
 
-        <div class="">
-
-          <!-- Exemplo simples de vídeo -->
-          <div class="card" style="width: 25rem; height: 20rem;">
-            <!-- <img src="..." class="card-img-top" alt="..."> -->
-            <video src="../Videos/Vídeo.mp4" autoplay loop controls></video>
+          <div class="card" style="width: 25rem;">
+            <video src="../Videos/Vídeo.mp4" autoplay loop controls>
+              Desculpa, o seu navegador não suporta vídeos incorporados,
+              mas você pode
+              <a href="videofile.ogg">baixá-lo</a>
+              e assistir pelo seu reprodutor de mídia favorito!
+            </video>
             <div class="card-body">
               <div class="parag">
                 <p><strong>Nome: </strong>Android AI</p>
@@ -150,12 +133,14 @@
               </div>
             </div>
           </div>
-        </div>
 
-          <!-- Exemplo simples de vídeo -->
-          <div class="card" style="width: 25rem; height: 20rem;">
-            <!-- <img src="..." class="card-img-top" alt="..."> -->
-            <video src="../Videos/Vídeo.mp4" autoplay loop controls></video>
+          <div class="card" style="width: 25rem;">
+            <video src="../Videos/Vídeo.mp4" autoplay loop controls>
+              Desculpa, o seu navegador não suporta vídeos incorporados,
+              mas você pode
+              <a href="videofile.ogg">baixá-lo</a>
+              e assistir pelo seu reprodutor de mídia favorito!
+            </video>
             <div class="card-body">
               <div class="parag">
                 <p><strong>Nome: </strong>IOS AI</p>
@@ -164,12 +149,12 @@
             </div>
           </div>
 
-      </div>
+        </div>
 
     </div>
 
     <!--Footer -->
-    <div class="bg-dark footer-color">
+    <div class="container-fluid bg-dark footer-color">
 
       <section class="container">
 
@@ -179,23 +164,14 @@
             <h3>CONTACTOS</h3>
             <ul class="nav item-ul">
               <li class="nav-item mb-2"><strong>Telefone:</strong> +244 924941017 / 941873137</li>
-              <li class="nav-item mb-2"><strong> 
-                <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-at-fill" viewBox="0 0 16 16">
-                  <path d="M2 2A2 2 0 0 0 .05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2H2Zm-2 9.8V4.698l5.803 3.546L0 11.801Zm6.761-2.97-6.57 4.026A2 2 0 0 0 2 14h6.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586l-1.239-.757ZM16 9.671V4.697l-5.803 3.546.338.208A4.482 4.482 0 0 1 12.5 8c1.414 0 2.675.652 3.5 1.671Z"/>
-                  <path d="M15.834 12.244c0 1.168-.577 2.025-1.587 2.025-.503 0-1.002-.228-1.12-.648h-.043c-.118.416-.543.643-1.015.643-.77 0-1.259-.542-1.259-1.434v-.529c0-.844.481-1.4 1.26-1.4.585 0 .87.333.953.63h.03v-.568h.905v2.19c0 .272.18.42.411.42.315 0 .639-.415.639-1.39v-.118c0-1.277-.95-2.326-2.484-2.326h-.04c-1.582 0-2.64 1.067-2.64 2.724v.157c0 1.867 1.237 2.654 2.57 2.654h.045c.507 0 .935-.07 1.18-.18v.731c-.219.1-.643.175-1.237.175h-.044C10.438 16 9 14.82 9 12.646v-.214C9 10.36 10.421 9 12.485 9h.035c2.12 0 3.314 1.43 3.314 3.034v.21Zm-4.04.21v.227c0 .586.227.8.581.8.31 0 .564-.17.564-.743v-.367c0-.516-.275-.708-.572-.708-.346 0-.573.245-.573.791Z"/>
-                </svg></span>
-                  Email: </strong><a href="#">
+              <li class="nav-item mb-2"><strong>Email: </strong><a href="#">
                   departamentodeformaçãohgb@gmail.com</a></li>
             </ul>
           </div>
 
           <div class="col mb-3 footer-item-2">
             <ul class="nav item-ul">
-              <li class="nav-item mb-2">
-                <strong><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
-                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
-              </svg></span>    
-              Localização: </strong>Anfiteatro do ISPB</li>
+              <li class="nav-item mb-2"><strong>Localização: </strong>Anfiteatro do ISPB</li>
               <li class="nav-item mb-2"><strong>Organização: </strong>Direcção do HGB</li>
               <!-- <li class="nav-item mb-2"><strong>APOIO</strong></li> -->
             </ul>
@@ -208,8 +184,9 @@
     </div>
       
     </div>
-    <script src="/public/bootstrap/css/bootstrap.min.js"></script>
-
+    <%-include('../components/modal')%>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/js/modal.js"></script>
   </body>
 
 </html>
