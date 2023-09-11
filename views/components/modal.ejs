@@ -1,6 +1,6 @@
 <div class="modal fade" id="exampleModal" tabindex="-1">
     <div class="modal-dialog">
-      <div class="modal-content">
+      <div class="modal-content pb-4">
             <div class="modal-body position-relative">
                 <header class="d-flex flex-column align-items-center mt-5 mb-3 ">
                     <h1 class="w-30 fs-0 text-uppercase mb-3 fw-bold">
@@ -15,18 +15,14 @@
                 <div class="d-flex flex-column align-items-center">
                     <form class="needs-validation" novalidate>
                         <div id="alertMensagem"></div>
-                        <div class="d-flex flex-column mb-5">
-                            <label class="form-label" for="CIF">CIF/Nº do agente</label>
-                            <input
-                                id="CIF"
-                                class="form-control"
-                                style="width: 24rem;"
-                                type="text" 
-                                placeholder="exemplo: 3240LA03"
-                                required
-                            >
-                            <div class="invalid-feedback">Preencha o campo com CIF/Nº do agente</div>
-                        </div>
+
+                        <%- include('./Input', {
+                            id:'CIF', 
+                            label:'Nº CIF', 
+                            type: 'text', 
+                            placeholder: 'exemplo: 30010202LA', 
+                            mensagemDeErro:'Preencha o campo vazio'
+                        }) %>
 
                         <div class="d-flex flex-column align-items-center " >
                             <button
