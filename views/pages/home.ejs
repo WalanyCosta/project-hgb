@@ -3,21 +3,14 @@
 <%- include('../components/header')%>
   <body>
 
-    <div class="geral">
-
       <!-- header  -->
-      <section class="bg-img-color" id="header-page">
+      <header class="bg-img-color" id="header-page">
         <!--navbar-->
-        <nav class="navbar navbar-expand-lg  width-nav">
-
-          <div class="container py-3" id="container-nav">
-
+        <nav class="container py-3 navbar navbar-expand-lg  width-nav">
             <a href="#" class="navbar-brand">
               <img src="img/favicon.png" alt="logo of site" id="logopage">
             </a>
-
             <menu class="collapse navbar-collapse" id="navbar-items">
-
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="#">Início</a>
@@ -32,21 +25,14 @@
                   <a class="nav-link" href="#footer">Fale connosco</a>
                 </li>
               </ul>
-
             </menu>
-
-          </div>
-
         </nav>
-
-
         <div id="titulo" class="container mb-2">
-          <h1 class=""> <span class="text-danger">VII</span> <br> JORNADAS <br> CIENTIFICAS</h1>
+          <h1 class=""> <span class="text-warning">VII</span> <br> <span class="text-danger">JORNADAS</span> <br> CIENTÍFICAS</h1>
           <p class="lead">HOSPITAL GERAL DE BENGUELA <br> <span>Lema: assistencia Humanizada para melhor servir"</span>
           </p>
         </div>
-
-      </section>
+      </header>
 
       <section class="container py-3 container-about">
 
@@ -70,7 +56,7 @@
               >Emitir Certificado</button>
           </article>
         </div>
-
+        <!--IMAGEM-->
         <div class="container-img">
           <img src="../img/clay-banks-unsplash.jpg" alt="cover-doctor" class="cover-doctor">
         </div>
@@ -108,65 +94,53 @@
     </div>
     </section>
 
-    <!--Cards com imagens ou videos-->
-    <div class="container container-card">
+    <!--Cards com videos-->
+    <div class="container-fluid container-card">
 
       <div class="container-title mb-2">
-
         <h2 class="text-center mb-2">Depoimentos</h2>
         <p class="text-center ">Depoimentos de participantes das actividades passadas</p>
-
       </div>
 
-      <!--Area de cards - retirar as fotos e por videos-->
+      <!--Area de cards com videos-->
       <div class="cards container-video">
 
-        <div class="">
-
-          <!-- Exemplo simples de vídeo -->
-          <div class="card card-video">
-
-            <video src="arquivovideo.ogg" autoplay poster="imagemprevia.jpg">
+          <div class="card" style="width: 25rem;">
+            <video src="../Videos/Vídeo.mp4" autoplay loop controls>
               Desculpa, o seu navegador não suporta vídeos incorporados,
               mas você pode
               <a href="videofile.ogg">baixá-lo</a>
               e assistir pelo seu reprodutor de mídia favorito!
             </video>
-
+            <div class="card-body">
+              <div class="parag">
+                <p><strong>Nome: </strong>Android AI</p>
+                <p>Profissão: Enfermeira</p>
+              </div>
+            </div>
           </div>
 
-          <div class="parag">
-            <p><strong>Nome: </strong>Android AI</p>
-            <p>Profissão: Enfermeira</p>
-          </div>
-        </div>
-        <div class="">
-          
-          <!-- Exemplo simples de vídeo -->
-          <div class="card card-video">
-
-            <video src="arquivovideo.ogg" autoplay poster="imagemprevia.jpg">
+          <div class="card" style="width: 25rem;">
+            <video src="../Videos/Vídeo.mp4" autoplay loop controls>
               Desculpa, o seu navegador não suporta vídeos incorporados,
               mas você pode
               <a href="videofile.ogg">baixá-lo</a>
               e assistir pelo seu reprodutor de mídia favorito!
             </video>
-
-          </div>
-
-          <div class="parag">
-            <p><strong>Nome: </strong>IOS AI</p>
-            <p>Profissão: Doctor</p>
+            <div class="card-body">
+              <div class="parag">
+                <p><strong>Nome: </strong>IOS AI</p>
+                <p>Profissão: Doctor</p>
+              </div>
+            </div>
           </div>
 
         </div>
-
-      </div>
 
     </div>
 
     <!--Footer -->
-    <div class="bg-dark footer-color">
+    <div class="container-fluid bg-dark footer-color">
 
       <section class="container">
 
@@ -195,7 +169,6 @@
 
     </div>
       
-    </div>
     <%-include('../components/modal')%>
     <script src="/bootstrap/js/bootstrap.min.js"></script>
     <script src="/js/modal.js"></script>
