@@ -11,6 +11,22 @@ const getNomeDocs = () =>{
     return (Math.random() * 13) + '_doc.pdf'
 }
 
+const gerarPdf = async (certificadoEmHtml, nomeDoArquivoGerado) => {
+    const browser = await puppeteer.launch()
+    const page = await browser.newPage()
+    await page.setContent(certificadoEmHtml)
+    await page.emulateMediaType('screen')
+    await CriaPastaSeNaoExistir()
+    const pdf = await page.pdf({
+        path: `docs/${nomeDoArquivoGerado}`,
+        format: 'letter',
+        landscape: true,
+        printBackground: true
+    })
+    await browser.close()
+    return pdf
+}
+
 renderViews.get('/', async (request, response)=>{
     response.render('home')
 })
@@ -18,31 +34,22 @@ renderViews.get('/', async (request, response)=>{
 renderViews.get('/certificado/:numeroAgente', async (request, response)=>{
     const { numeroAgente } = request.params
     const usuario = BANCODADOMEMORIA.find((u)=> u.numeroAgente === numeroAgente)
-
+    const nomeDoArquivoGerado = getNomeDocs()
     if(!usuario){
-        return response.status(403).json({ error: 'usuário não existe na Base de Dados'})
+        return response.json({ error: 'usuário não existe na Base de Dados'})
     }
 
-    const nomeDoArquivo = getNomeDocs()
-    const certificadoEmHtml = await compilaHbs(usuario)
+    try {
+        const certificadoEmHtml = await compilaHbs(usuario)
 
-    const browser = await puppeteer.launch({headless: true})
-    const page = await browser.newPage()
-    await page.setContent(certificadoEmHtml)
-    await page.emulateMediaType('screen')
-    await CriaPastaSeNaoExistir()
-    //retorna o pdf criado
-    const pdf = await page.pdf({
-        path: `docs/${nomeDoArquivo}`,
-        format: 'letter',
-        landscape: true,
-        printBackground: true
-    })
-    
-    await browser.close()
-    //codigo de envio deve estar aqui
+        const pdf = await gerarPdf(certificadoEmHtml, nomeDoArquivoGerado)        
+        
+        //codigo de envio deve estar aqui
 
-    return response.json({mensagem: 'Gerado com sucesso'})    
+        return response.json({mensagem: 'Gerado com sucesso'})     
+    } catch (error) {
+        return response.json({error: 'Erro no servidor. Por favor tente novamente'})   
+    }
 })
 
 export default renderViews
