@@ -23,14 +23,8 @@
 /* navbar */
 
 .width-nav {
-
   height: 3.75rem;
   width: 100%;
-  
-
-}
-
-div#container-nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
