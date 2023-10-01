@@ -26,7 +26,12 @@
                 <a class="nav-link" href="#">Fale connosco</a>
               </li>
             </ul>
-            <button type="button" class="btn btn-danger" id="btn-cadastro">Cadastrar-se</button>
+            <button type="button" 
+            class="btn btn-danger" 
+            id="btn-cadastro" 
+            data-bs-toggle="modalCadastro"
+            data-bs-target="#exampleModalCadastro"
+            >Cadastrar-se</button>
           </div>
         </div>
 
@@ -141,8 +146,8 @@
               <!-- <li class="nav-item mb-2"><strong>APOIO</strong></li> -->
             </ul>
           </div>
-
         </footer>
+
     <%-include('../components/modal')%>
     <script src="/bootstrap/js/bootstrap.min.js"></script>
     <script src="/js/modal.js"></script>

@@ -1,0 +1,60 @@
+<div class="modalCadastro fade" id="exampleModalCadastro" tabindex="-1">
+  <div class="modalCadastro-dialog">
+    <div class="modalCadastro-content pb-4">
+          <div class="modalCadastro-body position-relative">
+              <header class="d-flex flex-column align-items-center mt-5 mb-3 ">
+                  <h1 class="w-30 fs-0 text-uppercase mb-3 fw-bold">
+                      Formulário </br> de <span class="text-warning ws-1">Cadastro</span>
+                  </h1>
+                  <p class="text-center fs-6 w-10">
+                      Preencha os campos a baixo para efetuar o seu 
+                      <span class="text-warning fw-medium">Cadastro</span>
+                  </p>
+              </header>
+              <div class="position-absolute top-0 px-3 py-5 bg-danger" style="left: 73%;"></div>
+              <div class="d-flex flex-column align-items-center">
+                  <form class="needs-validation" novalidate>
+                        <div class="my-3">
+                            <label class="form-label">Nome</label>
+                            <input class="form-control" type="text" name="f-name">
+                        </div>
+              
+                        <div class="my-3">
+                            <label class="form-label">Email</label>
+                            <input class="form-control" type="email" name="f-email">
+                        </div>
+              
+                        <div class="row">
+                            <div class="my-3 col">
+                                <label class="form-label">Data de nascimento</label>
+                                <input class="form-control" type="date" name="f-data">
+                            </div>
+                
+                            <div class="my-3 col">
+                                <label class="form-label">Nº B.I</label>
+                                <input class="form-control" type="text" name="f-bi">
+                            </div>
+                        </div>
+              
+                        <div class="d-flex flex-row-reverse align-items-end " >
+                            <button
+                                type="submit" 
+                                class="btn btn-danger m-2"
+                            >
+                                Cadastrar
+                            </button>
+                            <button 
+                                type="button"
+                                class="btn m-2 btn-outline-danger"
+                                data-bs-dismiss="modalCadastro"
+                            >
+                                Cancelar
+                            </button>
+                        </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+

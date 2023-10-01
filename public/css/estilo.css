@@ -324,9 +324,9 @@ h1 {
 }
 }
 
-@media (min-width:360px) and (max-width:412px){
+@media (min-width:320px) and (max-width:412px){
   #estilo_card_video{
-    max-width: 20rem;
+    max-width: 18rem;
   }
 
   .numeros{
