@@ -1,6 +1,6 @@
-<h1 align='center' color="pink">Projecto-HGB</h1>
-
-<h2 align='center'>BANNER IMAGEM</h2>
+<p align="center">
+   <img src="./public/img/favicon.png">
+</p>
 
 ## Descrisão do Projecto
 ---
