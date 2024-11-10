@@ -1,0 +1,6 @@
+{
+    "*.{js,ts}": [
+      "npx biome lint --fix",
+      "npm run test:staged"
+    ]
+}
