@@ -15,9 +15,14 @@
 ## Indices
 ---
 
-  - [Descrisão do Projecto](#descrisão-do-projecto)
+  - [Descrição do Projeto](#descrisão-do-projecto)
+  - [Requirementos](#)
+   - [Requiremento login](/requirements/login-requirement.md)
+   - [Requiremento signup](/requirements/signup-requirement.md)
+   - [Requiremento emitir certificação](/requirements/emitter-certification.md)
   - [Features](#features)
   - [Começando a usar](#começando-a-usar)
+  - [Metodos utilizados](#MetHods-in-use)
   - [Tecnologia usada](#tecnologia-usada)
   - [Autores](#autores)
   - [Licença](#licença)   
@@ -30,9 +35,9 @@
 
 - [x] Home
 - [x] Interface do Emitir certificado
-- [] Interface do cadastrar usuário
-- [] Gerar e enviar certificado
-- [] cadastrar usuario no evento
+- [ ] Interface do cadastrar usuário
+- [ ] Gerar e enviar certificado
+- [ ] cadastrar usuario no evento
 
 ## Começando a usar
 ---
@@ -80,6 +85,12 @@
       #Rota da pagina do modal para trabalhar no modal(será eliminada depois)
       localhost:3333/formulario
     ````
+## Metodos utilizado
+
+- BDD
+- SOLID
+- Package by feature
+- CI/CD
 
 ## Tecnologia usada
 ---
