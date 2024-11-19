@@ -10,8 +10,66 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model usuario {
-  id    String @id @default(uuid())
-  nome  String
-  email String
+model User {
+  id               String        @id @default(uuid())
+  nome             String
+  email            String
+  role             String
+  emailVerificated Boolean       @default(false)
+  status           String
+  createdAt        DateTime      @default(now())
+  updatedAt        DateTime      @updatedAt
+  Participant      Participant[]
+
+  @@map("users")
+}
+
+model Participant {
+  id        String   @id @default(uuid())
+  name      String
+  email     String
+  phone     String
+  gender    String
+  birthday  DateTime
+  createdAt DateTime @default(now())
+  updateAt  DateTime @updatedAt
+  userId    String
+
+  user User @relation(fields: [userId], references: [id])
+
+  EventParticipant EventParticipant[]
+
+  @@map("participants")
+}
+
+model Event {
+  id                 String   @id @default(uuid())
+  name               String
+  limiteParticipants Int
+  dateStart          DateTime
+  dateEnd            DateTime
+  status             String
+  hourStart          String
+  hourEnd            String
+  ageRestriction     String
+  createAt           DateTime @default(now())
+  updateAt           DateTime @updatedAt
+
+  EventParticipant EventParticipant[]
+
+  @@map("events")
+}
+
+model EventParticipant {
+  isPresented   Boolean  @default(false)
+  eventId       String
+  participantId String
+  createAt      DateTime @default(now())
+  updateAt      DateTime @updatedAt
+
+  event       Event       @relation(fields: [eventId], references: [id])
+  participant Participant @relation(fields: [participantId], references: [id])
+
+  @@id([eventId, participantId])
+  @@map("event_participants")
 }
