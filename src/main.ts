@@ -1,7 +1,15 @@
-import app from './infra/api/server';
+import 'express-async-errors';
+import { Application } from './web';
+import { prisma } from 'infra/repository/prisma/config/prisma-client';
 
-const port = process.env.PORT || '';
+const port = parseInt(process.env.PORT ?? '5000');
 
-app.listen(port, () => {
-	console.log(`Server is running in port ${port}`);
-});
+prisma
+	.$connect()
+	.then(() => {
+		new Application().runServer(port);
+	})
+	.catch((error) => {
+		console.log(error);
+		process.exit(1);
+	});

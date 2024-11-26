@@ -14,8 +14,10 @@ model User {
   id               String        @id @default(uuid())
   nome             String
   email            String
+  password         String
   role             String
   emailVerificated Boolean       @default(false)
+  verificationCode String
   status           String
   createdAt        DateTime      @default(now())
   updatedAt        DateTime      @updatedAt
@@ -25,17 +27,12 @@ model User {
 }
 
 model Participant {
-  id        String   @id @default(uuid())
-  name      String
-  email     String
-  phone     String
-  gender    String
-  birthday  DateTime
-  createdAt DateTime @default(now())
-  updateAt  DateTime @updatedAt
-  userId    String
-
-  user User @relation(fields: [userId], references: [id])
+  id       String   @id @default(uuid())
+  phone    String
+  gender   String
+  birthday DateTime
+  userId   String
+  user     User     @relation(fields: [userId], references: [id])
 
   EventParticipant EventParticipant[]
 
@@ -46,12 +43,10 @@ model Event {
   id                 String   @id @default(uuid())
   name               String
   limiteParticipants Int
-  dateStart          DateTime
-  dateEnd            DateTime
+  dateEvent          DateTime
   status             String
-  hourStart          String
-  hourEnd            String
-  ageRestriction     String
+  hourEvent          String
+  ageRestriction     Int
   createAt           DateTime @default(now())
   updateAt           DateTime @updatedAt
 
